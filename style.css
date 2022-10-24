@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Press Start 2p', sans-serif;
+  color: #eee;
+  background-color: #222;
+}
+/* LAYOUT */
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+header :nth-child(1) {
+  font-size: 4rem;
+  position: absolute;
+  top: 40px;
+  left: 38%;
+}
+.between {
+  position: absolute;
+  left: 85%;
+  font-size: 1.5rem;
+  top: 20px;
+}
+.number {
+  width: 15rem;
+  height: 80px;
+  background: #eee;
+  position: absolute;
+  top:100%;
+  left: 50%;
+  color: #222;
+  font-size: 4rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+.again {
+  position: absolute;
+  top: 20px;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.left {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+}
+.left > input {
+  background: transparent;
+  border: 2px solid #eee;
+  width: 30%;
+  padding: 30px 0;
+  color: #eee;
+  font-size: 4rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left button {
+  background: #eee;
+  color: #222;
+  border: none;
+  width: 30%;
+  height: 40px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.message,
+.label-score,
+.label-highscore {
+  font-size: 2rem;
+}
+.label-score {
+  margin-top: 35px;
+}
+.label-highscore {
+  margin-top: 10px;
+}
+@media(max-width:768px){
+  header :nth-child(1) {
+    left: 30%;
+    top: 30%;
+  }
+  .between {
+    left: 75%;
+  }
+}
+@media(max-width:600px){
+  .left > input,
+  .left > button {
+    margin-left: 10%;
+    width: 50%;
+  }
+  .left{
+    width: 50%;
+  }
+  .right{
+    width: 50%;
+  }
+}
+@media(max-width:360px){
+  header :nth-child(1) {
+   font-size: 2rem;
+   left: 25%;
+  }
+  .left > input,
+  .left > button {
+    margin-left: 10%;
+    width: 50%;
+    padding: 15px 0;
+  }
+}
