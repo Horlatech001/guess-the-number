@@ -1,9 +1,10 @@
 'use strict';
 
 //Generating the random numbers
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
+
 
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
@@ -11,7 +12,7 @@ const displayMessage = function (message) {
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value); // used to get the value from the input field
-  // console.log(guess, typeof guess);
+  console.log(guess, typeof guess);
 
   // When there is no guess
   if (!guess) {
@@ -68,9 +69,10 @@ document.querySelector('.check').addEventListener('click', function () {
 // implementing the again button
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
   document.querySelector('.score').textContent = score;
   // document.querySelector('.message').textContent = 'Start Guessing...';
-  displayMessage('Start Guessing...')
+  displayMessage('Start Guessing...');
   document.querySelector('.number').textContent = '?';
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = '#222';
